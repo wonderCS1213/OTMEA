@@ -3,10 +3,10 @@
 >This paper introduces OTMEA, a multi-modal entity alignment method leverages optimal transport to mitigate modality heterogeneity from the perspective of modality distributions.
 
 <!--<div align="center">
-    <img src="https://github.com/wonderCS1213/OTMEA/IMG/OTMEA.jpg" width="95%" height="auto" />
+    <img src="[https://github.com/wonderCS1213/OTMEA/IMG/OTMEA.jpg](https://github.com/wonderCS1213/OTMEA/blob/main/IMG/OTMEA.jpg)" width="95%" height="auto" />
 </div> -->
 
-[![OTMEA](https://github.com/wonderCS1213/OTMEA/IMG/OTMEA.jpg)] 
+[![OTMEA](https://github.com/wonderCS1213/OTMEA/blob/main/IMG/OTMEA.jpg)] 
 
 <!-- >In this paper .... -->
 

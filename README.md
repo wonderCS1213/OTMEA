@@ -6,7 +6,7 @@
     <img src="https://github.com/wonderCS1213/OTMEA/IMG/OTMEA.jpg" width="95%" height="auto" />
 </div> -->
 
-[![MEAformer](https://github.com/wondercs/OTMEA/IMG)]
+[![OTMEA](https://github.com/wondercs/OTMEA/IMG/OTMEA.jpg)]
 
 <!-- >In this paper .... -->
 

@@ -6,7 +6,7 @@
     <img src="[https://github.com/wonderCS1213/OTMEA/IMG/OTMEA.jpg](https://github.com/wonderCS1213/OTMEA/blob/main/IMG/OTMEA.jpg)" width="95%" height="auto" />
 </div> -->
 
-[![OTMEA](https://github.com/wonderCS1213/OTMEA/blob/main/IMG/OTMEA.jpg)] 
+![OTMEA](https://github.com/wonderCS1213/OTMEA/blob/main/IMG/OTMEA.jpg) 
 
 <!-- >In this paper .... -->
 

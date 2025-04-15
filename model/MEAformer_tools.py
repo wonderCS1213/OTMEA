@@ -65,7 +65,7 @@ class MformerFusion(nn.Module):
 
     def cal_ot(self, mm_embeddings, st_embeddings, delta_ot):
         device = delta_ot.device
-        number = 5
+        number = 3
         mm_dim = mm_embeddings.shape[-1]
         st_dim = st_embeddings.shape[-1]
         mm_dis = torch.ones_like(mm_embeddings[0, :])

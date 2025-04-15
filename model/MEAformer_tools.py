@@ -88,9 +88,6 @@ class MformerFusion(nn.Module):
         for i, layer_module in enumerate(self.fusion_layer):
             layer_outputs = layer_module(hidden_states, output_attentions=True)
             hidden_states = layer_outputs[0]
-        # torch.Size([30355, 5, 4, 4])
-        # attention_pro = layer_outputs[1]
-        # torch.Size([30355, 4, 4])
         attention_pro = torch.sum(layer_outputs[1], dim=-3)
         attention_pro_comb = torch.sum(attention_pro, dim=-2) / math.sqrt(modal_num * self.args.num_attention_heads)
         weight_norm = F.softmax(attention_pro_comb, dim=-1)
@@ -108,17 +105,8 @@ class MformerFusion(nn.Module):
             embs[4] = embs[4].mm(matrix4)
             matrix3 = self.cal_ot(embs[5], embs[3], self.mats_char)
             embs[5] = embs[5].mm(matrix3)
-        if self.args.data_choice in ['FBDB15K', 'FBYG15K']:
-            matrix2 = self.cal_ot(embs[0], embs[3], self.mats_img)
-            embs[0] = embs[0].mm(matrix2)
-            #embs = [weight_norm[:, idx].unsqueeze(1) * F.normalize(embs[idx]) for idx in range(modal_num)]
-            embs = [F.normalize(embs[idx]) for idx in range(modal_num)]
-        else :
-            embs = [weight_norm_tmp[idx] * F.normalize(embs[idx]) for idx in range(modal_num)]
-        #embs_tmp = [weight_norm_tmp[idx] * F.normalize(embs[idx]) for idx in range(modal_num)]
-        #embs = [weight_norm[:, idx].unsqueeze(1) * F.normalize(embs[idx]) for idx in range(modal_num)]
-        #embs = [self.alp * embs_tmp[idx] + (1 - self.alp) * embs[idx] for idx in range(modal_num)]
-        #embs = [weight_norm[:, idx].unsqueeze(1) * embs[idx] for idx in range(self.modal_num) if embs[idx] is not None]
+       
+        embs = [weight_norm[:, idx].unsqueeze(1) * F.normalize(embs[idx]) for idx in range(modal_num)]
         joint_emb = torch.cat(embs, dim=1)
         del embs
         return joint_emb, hidden_states, weight_norm

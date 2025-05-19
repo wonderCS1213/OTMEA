@@ -1,2 +1,2 @@
-from .MEAformer import MEAformer
+from .OTMEA import OTMEA
 

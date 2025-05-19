@@ -80,9 +80,9 @@ OTMEA
 ├── model
 │   ├── __init__.py
 │   ├── layers.py
-│   ├── MEAformer_loss.py
-│   ├── MEAformer.py
-│   ├── MEAformer_tools.py
+│   ├── OTMEA_loss.py
+│   ├── OTMEA.py
+│   ├── OTMEA_tools.py
 │   └── Tool_model.py
 ├── src
 │   ├── __init__.py
@@ -162,7 +162,7 @@ mmkg
 │   ├── fr_en_GA_id_img_feature_dict.pkl
 │   ├── ja_en_GA_id_img_feature_dict.pkl
 │   └── zh_en_GA_id_img_feature_dict.pkl
-├── MEAformer
+├── OTMEA
 └── dump
 ```
 

@@ -35,7 +35,7 @@ class cfg():
         # parser.add_argument("--data_rate", type=float, default=0.3, choices=[0.2, 0.3, 0.5, 0.8], help="training set rate")
 
         # TODO: add some dynamic variable
-        parser.add_argument("--model_name", default="MEAformer", type=str, choices=["EVA", "MCLEA", "MSNEA", "MEAformer"], help="model name")
+        parser.add_argument("--model_name", default="MEAformer", type=str, choices=["EVA", "MCLEA", "MSNEA", "MEAformer", "OTMEA"], help="model name")
         parser.add_argument("--model_name_save", default="", type=str, help="model name for model load")
 
         parser.add_argument('--workers', type=int, default=8)

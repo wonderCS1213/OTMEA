@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=0,1 python main.py \
+CUDA_VISIBLE_DEVICES=0,1,2 python main.py \
             --gpu           $1    \
             --eval_epoch    1  \
             --only_test     0   \

@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=0,1,2 python main.py \
             --gpu           $1    \
             --eval_epoch    1  \
             --only_test     0   \
-            --model_name    MEAformer \
+            --model_name    OTMEA \
             --data_choice   $2 \
             --data_split    $3 \
             --data_rate     $4 \
@@ -14,7 +14,7 @@ CUDA_VISIBLE_DEVICES=0,1,2 python main.py \
 	        --csls          \
 	        --csls_k        3 \
 	        --random_seed   42 \
-            --exp_name      IJCAI_MEAformer_sf_$5_500-Norm \
+            --exp_name      ICASSP_OTMEA_sf_$5_500-Norm \
             --exp_id        v1_$3_$4 \
             --workers       12 \
             --dist          0\
